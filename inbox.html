@@ -1,0 +1,116 @@
+<html lang="en">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<head>
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width" />
+	<script src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<div id='header'>
+	</div>
+	<div class='container'>
+	
+		<div id="sidebar">
+			<span class='header1'>Inbox</span>
+			
+			<div class='list'>
+				<div id='list_slider'>
+					<div id='unreplied_messages' class='dropdown'>
+						<div class='item hoverable active'>
+							<img src='assets/kathleen.jpg' class=''>
+							<div class='item_text'>
+								<div class='green header3'>Kathleen Henteges</div>
+								<span class='footnote'>wrote you 2 minutes ago</span>
+							</div>
+						</div>
+	
+						<div class='item hoverable'>
+							<img src='assets/peter.jpg' class=''>
+							<div class='item_text '>
+								<div class='green header3'>Peter Karp</div>
+								<span class='footnote'>wrote you 37 minutes ago</span>
+							</div>				
+						</div>
+	
+						<div class='item hoverable'>
+							<img src='assets/david.jpg' class=''>
+							<div class='item_text '>
+								<div class='header3'>David Dean</div>
+								<span class='footnote'>wrote 9 hours ago</span>
+							</div>						
+						</div>
+					</div>
+
+
+					<div class='dropdown' onclick='$(".dropdown_options").toggleclass("open")'>
+		
+						<div class='secondary_subsection_no_border subsection_head'>
+							Replied messages (2)
+							<span class='right arrow'>&#9660;</span>
+						</div>		
+		
+						<div class='dropdown_options'>				
+							<div class='item hoverable read'>
+								<img src='assets/seton.jpg' class=''>
+								<div class='item_text'>
+									<div class='header3'>Seton McAndrews</div>
+									<span class='footnote'> you've replied</span>
+								</div>
+							</div>
+							<div class='item hoverable read'>
+								<img src='assets/sabrina.jpg' class=''>
+								<div class='item_text'>
+									<div class='header3'>Sabrina Lowell</div>
+									<span class='footnote'>you've replied</span>
+								</div>			
+							</div>					
+						</div>
+						
+					</div>
+				</div>
+						
+			</div>			
+		</div>
+		
+		<div id='main'>
+			<div id='profile'>
+
+
+			<div class='comment_body'>
+			<div class='footnote'>To <pop> Kathleen Hentges</pop> </div>
+			<p>Here, I will type my question for Kathleen.
+The second you pull money out of your 401(k)- without rolling over to an IRA or other 401(k) plan- you incur an immediate income tax liability on the entire amount of the withdrawal. You also lose the benefit of future tax deferral, although this isn’t the end of the world. 
+<p>Investment real estate has tax advantages of its own, including the deferral of capital gains tax through 1031 exchanges and just plain holding on to properties, rather than selling. However, rental income is generally taxable outside of retirement plans. <span class='footnote'>&#8212 2 days ago </span></p>
+</p> 
+
+
+				<div class='followup_section'>
+					<div class='inbox_message'>
+					<div class='footnote'><pop> Kathleen</pop> replied, </div>
+						<p>The second you pull money out of your 401(k)- without rolling over to an IRA or other 401(k) plan- you incur an immediate income tax liability on the entire amount of the withdrawal. You also lose the benefit of future tax deferral, although this isn’t the end of the world. 
+					<span class='footnote'>&#8212 9 hours ago</span></p>
+				</div>
+					<div class='inbox_message'>
+							<div class='footnote'>You wrote, </div>
+<p>
+Investment real estate has tax advantages of its own, including the deferral of capital gains tax through 1031 				
+					<span class='footnote'>&#8212 32 minutes ago</span></p>	
+				</div>
+				</div>
+				<div class='footer_links'>			
+					<a class='metric_text green followup_button' onclick='reply_message()'>reply</a>
+					<div class='followup_entry'>
+						<a class='metric_text' onclick='cancel_followup()'>Cancel</a>
+						<a class='metric_text green' onclick='confirm_followup()'>submit</a>
+					</div>
+				</div>						
+			</div>
+		</div>
+
+		</div>
+	</div>	
+	<script src='maven.js'></script>
+
+</body>
+</html>

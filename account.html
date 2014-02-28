@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width" />
+	<script src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+
+	<div class='modal'>
+	</div>
+	
+	<div id='header'></div>
+	<div class='container'>
+
+		
+		<div id="sidebar">
+		<span class='header1'>Account settings</span>
+		<br><br>
+
+	</div>
+		<div id='main'>
+		<div id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Login credentials</span>
+				<form>
+					<label>Email address</label> 
+					<input type='text' class="text_input" value='current@email.com'>
+					<a class='green right password_change'>Change password</a>
+					<div class='new_password'>
+						<label>New password</label> <input type='password' class="text_input"> <br>
+						<label>Confirm password</label> <input type='password'class="text_input">
+				 	</div>
+				</form>
+			 	<a class='standard primary button '>OK</a>
+			</div>
+			<div class='subsection questionnaire'>
+				<span class='section_head'>Match questionnaire</span>
+				
+				<p>1) Are you seeking ongoing financial guidance, or one-time help with a specific life event?</p>
+				<div class='metric_text choices'>
+					<input type='radio'><span>ongoing</span>
+					<input type='radio'><span>one-time</span>
+				</div>	
+				
+				<p>2) Are you looking for help in any specific areas? We can match you with experts who are highly rated in these specialties.</p>
+				<div class='metric_text' id='specialty'>
+				</div>
+
+				<p>3) Do you identify with any of the following?</p>
+				<div class='metric_text' id='niche'>
+				</div>
+
+				<p>4) How financially savvy do you consider yourself?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> not at all <span class=" right"> extremely</span></span>
+				</div>
+
+				<p>5) Do you trade stocks, and if so how frequently?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> never <span class=" right"> daily</span></span>
+				</div>
+
+				<p>6) If your retirement portfolio lost 20% of its value during a one month market slide, what would you be inclined to do?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> mostly sell <span class=" right"> buy more</span></span>
+				</div>								
+
+				<p>7) If Jim Cramer from Mad Money recommends a stock, are you more or less likely to consider buying it?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> less <span class=" right"> more</span></span>
+				</div>	
+
+				<p>8) To what extent is "beating the market" important to you?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> it's not <span class=" right"> extremely</span></span>
+				</div>					
+
+				<p>9) Ideally, how often do you want to catch up with your advisor over the long term?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> annually <span class=" right"> daily</span></span>
+				</div>	
+
+				<p>10) To what extent is "beating the market" important to you?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> it's not <span class=" right"> extremely</span></span>
+				</div>
+				<a class='primary button'>Save</a>	
+			</div>			
+		</div>
+	</div>
+	</div>	
+	<script src='maven.js'></script>
+
+</body>
