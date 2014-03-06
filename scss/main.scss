@@ -39,6 +39,38 @@ a {
 	cursor:hand;
 }
 
+
+#card {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-webkit-transition-duration: 0.8s;
+	
+}
+
+.flipped {
+	-webkit-transform:rotateY(-180deg)
+}
+
+.face {
+	background:white;
+	border-radius:5px;
+	border:1px solid #ccc;
+	padding:20px;
+	box-sizing: border-box;	
+	-webkit-backface-visibility: hidden;
+	position:absolute;
+	width:100%
+	
+}
+.front {
+	z-index: -1;
+}
+
+.back {
+	-webkit-transform:rotateY(-180deg);		
+}
 body{
 	background-color: #fafafa;
 	font-family: Proxima-Nova-light, sans-serif;
@@ -49,6 +81,8 @@ body{
 	cursor: default;
 	-webkit-transition: all 1s;	
 	transition: all 1s;
+	-webkit-perspective:1000px; 
+
 }
 
 .container {
@@ -721,7 +755,8 @@ input[type=password]
 .input_bubble {
 	border: 1px solid #aaa;
 	border-radius: 3px;		
-
+	margin-bottom: 10px;
+	
 	input, textarea {
 		margin: 0px;
 		border: none;

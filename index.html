@@ -5,7 +5,7 @@
 	<script src='jquery-1.9.1.min.js'></script>
 
 </head>
-<body id='background_splash'>
+<body id=''>
 
 	<div class='modal'>
 		<div id='fader'></div>
@@ -35,28 +35,92 @@
 		<div id='header'>
 			<img src="assets/LOGO-Maven.png">
 		</div>	
-		<div id='main_box'>
-			<div class='header1'>We believe everyone should have access to great financial advice.</div>
+		<div style='height:350px'>
+		<div class='half left'>
+			<div class='header1'>We believe everyone deserves great financial advice.</div>
 
-			<div class='header2'>Got a burning question? Get free pointers from vetted advisors.</div>
-			<br>
-			<input class='full text_input' placeholder='Your question here'></input>
-			
-			<textarea class='full text_input expander' placeholder='Add details (optional)'></textarea>
-			<br><br>
-			<div class='input_bubble'>
-				<input placeholder='First name' class='full under '>
-				<input placeholder='Email' class='half  end'>
-				<input placeholder='Password' class='half '>
-			
-			</div><br>
-			<a class='primary button ' onclick="window.location='confirm.html';">Ask a question</a>
-			
-
+			<div class='header2'>Get free pointers directly from vetted advisors, within the hour.</div>
 		</div>
-	</div>
-	<script src='maven.js'></script>
+		<div class='half right' id='card'>
+			<div class='front face'>
+				<input id='ask' class='full text_input under' style='font-size:1.5em' placeholder='Got a question?'></input>			
 
+				<textarea id='elaborate' class='full text_input' placeholder='Add details (optional)' rows='6'></textarea>
+				
+			<a class='primary button 'onclick="$('#card').toggleClass('flipped')">Ask</a>					
+			
+		</div>	
+			<div class='back face'>
+					Looks like it's your first time here. Please set up an account:
+					<input placeholder='First name' class='full text_input '>
+					<input placeholder='Email' class='full text_input'>
+					<div class='input_bubble'>
+						<input placeholder='Password' class='half end text_input'>
+						<input placeholder='Password confirm' class='half text_input '>
+					</div>
+
+			<a class='primary button ' onclick="$('#card').toggleClass('flipped')">Submit</a>					
+		
+			</div><br>
+
+		</div>	
+		</div>
+<span class="section_head">Recent questions</span>
+<div class="search_result">
+				<div class="question_entry hoverable" onclick="location.href='question.html';">
+					<div class="table">
+						<div class="cell question_text">
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class="footnote">asked 6 days ago</div>					
+						</div>
+						<div class="cell participant_avatars ">
+							<span class="footnote"></span>
+							<img src="assets/david.jpg">
+							<img src="assets/seton.jpg">
+							<img src="assets/kathleen.jpg">
+						</div>
+					</div>	
+				</div>				
+				<div class="question_entry hoverable" onclick="location.href='question.html';">
+					<div class="table">
+						<div class="cell question_text">
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class="footnote">asked 6 days ago</div>					
+						</div>
+						<div class="cell participant_avatars ">
+							<span class="footnote"></span>
+						
+							<img src="assets/seton.jpg">
+							<img src="assets/kathleen.jpg">
+						</div>
+					</div>	
+				</div>				
+				
+				<div class="question_entry hoverable" onclick="location.href='question.html';">
+					<div class="table">
+						<div class="cell question_text">
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class="footnote">asked 6 days ago, filed under <b>Retirement</b>, <b>Real estate</b></div>					
+						</div>
+						<div class="cell participant_avatars ">
+							<span class="footnote"></span>
+							
+							<img src="assets/peter.jpg">
+							<img src="assets/sabrina.jpg">
+							<img src="assets/david.jpg">
+							<img src="assets/seton.jpg">
+							<img src="assets/kathleen.jpg">
+						</div>
+					</div>	
+				</div>				
+			</div>
+	</div>
+	
+	<script src='maven.js'></script>
+	<script>
+		$('#ask').focus();		
+
+	</script>
 </body>
 
 </html>
