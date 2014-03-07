@@ -34,12 +34,20 @@
 	<div class='container'>
 		<div id='header'>
 			<img src="assets/LOGO-Maven.png">
-		</div>	
-		<div style='height:350px'>
-		<div class='half left'>
-			<div class='header1'>We believe everyone deserves great financial advice.</div>
+		</div>
+	</div>	
+		<div style='' id='background_splash'>
+	<div class='container'>
+		<div id='post_submit'>
+					<span class='header1' style=''>Thanks for your question!</span><br>
+					We'll be getting to it soon. In the meantime, check out some other questions below.	
+		</div>
+		<div class='half left' id='headline'>
+			<div class='header1' style='color:white; margin-top:50px;	text-shadow: 0px 0px 30px #000;
+	color:white;'>We believe everyone deserves great financial advice.</div>
 
-			<div class='header2'>Get free pointers directly from vetted advisors, within the hour.</div>
+			<div class='header2' style='color:white;text-shadow: 0px 0px 30px #000;
+'>Get free pointers directly from vetted advisors, within the hour.</div>
 		</div>
 		<div class='half right' id='card'>
 			<div class='front face'>
@@ -47,30 +55,33 @@
 
 				<textarea id='elaborate' class='full text_input' placeholder='Add details (optional)' rows='6'></textarea>
 				
-			<a class='primary button 'onclick="$('#card').toggleClass('flipped')">Ask</a>					
+			<a class='primary button 'onclick="$('#card').toggleClass('flipped'); $('#first_name').focus()">Ask</a>					
 			
 		</div>	
 			<div class='back face'>
-					Looks like it's your first time here. Please set up an account:
-					<input placeholder='First name' class='full text_input '>
+					<p class='header2'>Looks like it's your first time here. Please set up an account:</p>
+					<input placeholder='First name' class='full text_input' id='first_name'>
 					<input placeholder='Email' class='full text_input'>
 					<div class='input_bubble'>
 						<input placeholder='Password' class='half end text_input'>
 						<input placeholder='Password confirm' class='half text_input '>
 					</div>
 
-			<a class='primary button ' onclick="$('#card').toggleClass('flipped')">Submit</a>					
+			<a class='primary button ' onclick="submit_question()">Submit</a>					
 		
 			</div><br>
 
 		</div>	
 		</div>
-<span class="section_head">Recent questions</span>
-<div class="search_result">
+	</div>	
+	<div class='container'>
+	<br><br>
+		<p class="section_head">Recent questions</p>
+		<div class="search_result">
 				<div class="question_entry hoverable" onclick="location.href='question.html';">
 					<div class="table">
 						<div class="cell question_text">
-							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest?</span>
 							<div class="footnote">asked 6 days ago</div>					
 						</div>
 						<div class="cell participant_avatars ">
@@ -84,7 +95,7 @@
 				<div class="question_entry hoverable" onclick="location.href='question.html';">
 					<div class="table">
 						<div class="cell question_text">
-							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest?</span>
 							<div class="footnote">asked 6 days ago</div>					
 						</div>
 						<div class="cell participant_avatars ">
@@ -95,12 +106,11 @@
 						</div>
 					</div>	
 				</div>				
-				
 				<div class="question_entry hoverable" onclick="location.href='question.html';">
 					<div class="table">
 						<div class="cell question_text">
-							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
-							<div class="footnote">asked 6 days ago, filed under <b>Retirement</b>, <b>Real estate</b></div>					
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest?</span>
+							<div class="footnote">asked 6 days ago</div>					
 						</div>
 						<div class="cell participant_avatars ">
 							<span class="footnote"></span>
@@ -112,14 +122,59 @@
 							<img src="assets/kathleen.jpg">
 						</div>
 					</div>	
-				</div>				
+				</div>	
+				<div class="question_entry hoverable" onclick="location.href='question.html';">
+					<div class="table">
+						<div class="cell question_text">
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest?</span>
+							<div class="footnote">asked 6 days ago</div>					
+						</div>
+						<div class="cell participant_avatars ">
+							<span class="footnote"></span>
+						
+							<img src="assets/seton.jpg">
+							<img src="assets/kathleen.jpg">
+						</div>
+					</div>	
+				</div>	
+				<div class="question_entry hoverable" onclick="location.href='question.html';">
+					<div class="table">
+						<div class="cell question_text">
+							<span class="header2">Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest?</span>
+							<div class="footnote">asked 6 days ago</div>					
+						</div>
+						<div class="cell participant_avatars ">
+							<span class="footnote"></span>
+						
+							<img src="assets/seton.jpg">
+							<img src="assets/kathleen.jpg">
+						</div>
+					</div>	
+				</div>												
 			</div>
+			<br><br>
+			
+<p class="section_head">Meet the team</p>
 	</div>
-	
+<div id='advisor_spotlight'>
+	<img src='assets/advisor3.jpg' style='width:100%;position:absolute;z-index=-1;'>
+	<div class='container'>
+		<div class='third right' style='border-radius:15px;right:0px; background:black; color:white; padding:25px; margin-top:30px;opacity:0.7;width:40%;'>
+			<span class='header1'>"I specialize in helping young professionals and young doctors who need assistance with tax savings, budgeting, loan repayment, and investment strategies."</span><p>Grant Sanders</p>
+		</div>
+	</div>
+</div>
+	</div>
+	</div>
 	<script src='maven.js'></script>
 	<script>
 		$('#ask').focus();		
 
+		function submit_question() {
+			$('#card').attr('style','margin-right:-100%');
+			$('#headline').attr('style','margin-left:-100%');
+			$('#post_submit').show();
+		}
 	</script>
 </body>
 
