@@ -46,6 +46,11 @@ a {
   transition: all 1s;
 }
 
+/* line 48, scss/main.scss */
+#advisor_spotlight {
+  max-height: 800px;
+}
+
 /* line 51, scss/main.scss */
 #post_submit {
   text-align: center;
