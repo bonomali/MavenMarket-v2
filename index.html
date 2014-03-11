@@ -23,11 +23,6 @@
 						<label>Confirm password</label> <input type='password'class="text_input">
 				 	</div>
 
-
-				
-
-					
-
 			</div>		
 		</div>
 	</div>
@@ -37,46 +32,55 @@
 		</div>
 	</div>	
 		<div style='' id='background_splash'>
+		
 	<div class='container'>
 		<div id='post_submit'>
 					<span class='header1' style=''>Thanks for your question!</span><br>
 					We'll be getting to it soon. In the meantime, check out some other questions below.	
 		</div>
-		<div class='half left' id='headline'>
+		<div class='half left' id='headline' >
 			<div class='header1' style='color:white; margin-top:50px;	text-shadow: 0px 0px 30px #000;
 	color:white;'>We believe everyone deserves great financial advice.</div>
 
-			<div class='header2' style='color:white;text-shadow: 0px 0px 30px #000;
-'>Get free pointers directly from vetted advisors, within the hour.</div>
+			<div class='header2' style='color:white;text-shadow: 0px 0px 30px #000;'>
+				Get free pointers directly from vetted advisors, within the hour.</div>
 		</div>
-		<div class='half right' id='card'>
-			<div class='front face'>
-				<input id='ask' class='full text_input under' style='font-size:1.5em' placeholder='Got a question?'></input>			
+			<div class='half right' id='card'>
+				<div class='back face'>
+			<p class='header2'>
+				Looks like it's your first time here. Please set up an account:
+			</p>
+			<input placeholder='First name' class='full text_input' id='first_name'>
+			<input placeholder='Email' class='full text_input'>
 
-				<textarea id='elaborate' class='full text_input' placeholder='Add details (optional)' rows='6'></textarea>
-				
-			<a class='primary button 'onclick="$('#card').toggleClass('flipped'); $('#first_name').focus()">Ask</a>					
-			
-		</div>	
-			<div class='back face'>
-					<p class='header2'>Looks like it's your first time here. Please set up an account:</p>
-					<input placeholder='First name' class='full text_input' id='first_name'>
-					<input placeholder='Email' class='full text_input'>
-					<div class='input_bubble'>
-						<input placeholder='Password' class='half end text_input'>
-						<input placeholder='Password confirm' class='half text_input '>
-					</div>
+			<div class='input_bubble'>
+				<input type='password' placeholder='Password' class='half end text_input'>
+				<input type='password' placeholder='Password confirm' class='half text_input '>
+			</div>
 
 			<a class='primary button ' onclick="submit_question()">Submit</a>					
 		
-			</div><br>
+			</div>
+				<div class='front face'>
+				<input id='ask' class='full text_input under' style='font-size:1.5em' placeholder='Got a question?'></input>			
 
+				<textarea id='elaborate' class='full text_input' placeholder='Add details (optional)' rows='6'></textarea>
+
+			<a class='primary button 'onclick="$('#card').toggleClass('flipped'); $('#first_name').focus()">Ask</a>					
+			
 		</div>	
+				<br>
+	
+			</div>	
+		
 		</div>
 	</div>	
+	
 	<div class='container'>
 	<br><br>
 		<p class="section_head">Recent questions</p>
+		
+		
 		<div class="search_result">
 				<div class="question_entry hoverable" onclick="location.href='question.html';">
 					<div class="table">
@@ -163,6 +167,7 @@
 			<span class='header1'>"I specialize in helping young professionals and young doctors who need assistance with tax savings, budgeting, loan repayment, and investment strategies."</span><p>Grant Sanders</p>
 		</div>
 	</div>
+	
 </div>
 	</div>
 	</div>

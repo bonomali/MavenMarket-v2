@@ -48,6 +48,7 @@ text-shadow: 0px 0px 30px #000;
 #advisor_spotlight {
 	max-height:800px;
 }
+
 #post_submit {
 	text-align:center;
 	width:100%;
@@ -58,6 +59,7 @@ text-shadow: 0px 0px 30px #000;
 	color:white;
 	left:0px
 }
+
 #card {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
@@ -66,10 +68,12 @@ text-shadow: 0px 0px 30px #000;
 	-webkit-transition-duration: 0.8s;
 	margin-right:0px;
 	transition: all 0.8s;	
+	pointer-events: auto; 
+
 }
 
 .flipped {
-	-webkit-transform:rotateY(-180deg)
+	-webkit-transform:rotateY(180deg)
 }
 
 .face {
@@ -82,6 +86,7 @@ text-shadow: 0px 0px 30px #000;
 	position:absolute;
 	width:100%;
 	box-shadow: 0px 0px 30px #000;	
+	width:100%
 	
 }
 .front {
@@ -89,7 +94,9 @@ text-shadow: 0px 0px 30px #000;
 }
 
 .back {
-	-webkit-transform:rotateY(-180deg);		
+	-webkit-transform:rotateY(180deg);
+	width:100%
+		
 }
 body{
 	background-color: #fafafa;
@@ -97,7 +104,6 @@ body{
 	-webkit-font-smoothing: subpixel-antialiased;
 	color:#666;
 	margin: 0px;
-	padding-bottom:50px;
 	cursor: default;
 	-webkit-transition: all 1s;	
 	transition: all 1s;
@@ -466,6 +472,7 @@ a {
 width:25px;
 margin-left:5px;
 }
+
 /*Structure*/
 .answers {
 	margin-top:20px;
@@ -481,7 +488,8 @@ margin-left:5px;
 	-o-background-size: cover;
 	background-size: cover;
 	height:330px; 
-	padding-top:50px
+	padding-top:50px;
+	pointer-events: none; 
 
 }
 #profile {
@@ -807,14 +815,84 @@ input[type=password]
 }
 
 /* Advisor page */
+
+#headshot {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	overflow-y: hidden;
+	
+	img {
+		height:100%;
+		width:auto;
+	}
+}
+
+#splash {
+	background-image:url('assets/bg.jpg');
+	height:100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position-x: right;
+
+}
+
+#translucent_backing {
+	width:60%;
+	background-color:rgba(255,255,255,0.9);
+	height:100%;
+	overflow-y:scroll;
+	overflow-x:inherit;
+}
+
+.article {
+	background-color: white;
+	border: 1px solid #ddd;
+	margin-bottom:15px;
+	
+	.full_story {
+		padding:0px;
+		max-height:0px;
+		overflow:hidden;
+		transition:all 1s;
+		padding:0px 20px;
+		
+	}	
+	.expanded {
+		max-height:9999px;
+		padding:20px;
+		
+	}
+	.teaser {
+		max-height:122px;
+		text-overflow:ellipsis;
+		img {
+			float:left;
+			border:1px solid #fafafa;
+			width:30%;
+			max-width:180px;
+			margin-right:20px;
+		}
+		
+	
+	}
+}
+
 .edit {
 	display:none;
 }
+
 #firm:hover {
 	.edit {
 		display:inline;
 	}
 }
+
 #top_banner {
 	background:white;
 	border-bottom: 2px solid $light_green;
@@ -822,6 +900,7 @@ input[type=password]
 	display:none;
 	text-align: center;
 }
+
 .badge {
 	background-color: #999;
 	color: white;

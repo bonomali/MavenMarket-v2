@@ -6,101 +6,72 @@
 </head>
 
 <body>
-
-	<div class='compose modal'>
-		<div id='fader'></div>
-		<div class='modal_window' id='profile'>
-			<div class='subsection'>
-				<span class='section_head'>Schedule a consultation</span>
-				<div id='planner'></div>
-				<iframe src='http://shrouded-hamlet-3595.herokuapp.com/' class='full' scrolling="no" height='600px'></iframe>
-				<div class='half'>
-					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
-					<a class='primary paired button' onclick='send_message()'>Send</a>					
+<div class="compose modal" style="display:none; opacity:0">
+		<div id="fader"></div>
+		<div class="modal_window" id="profile">
+			<div class="subsection">
+				<span class="section_head">Schedule a consultation</span>
+				<div id="planner"></div>
+				<iframe src="http://shrouded-hamlet-3595.herokuapp.com/" class="full" scrolling="no" height="600px"></iframe>
+				<div class="half">
+					<a class="secondary paired button" onclick="hide_modal()">Cancel</a>
+					<a class="primary paired button" onclick="send_message()">Send</a>					
 				</div>	
 			</div>		
 		</div>
 	</div>
-
-	<div class='firm modal'>
-		<div id='fader'></div>
-		<div class='modal_window' id='profile'>
-			<div class='subsection'>
-				<span class='section_head'>Edit firm</span>
-				Firm and address:				
-				<p>
-				<textarea rows='4' class='full text_input' placeholder=''></textarea>
-				</p>
-				<div class='half'>
-					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
-					<a class='primary paired button' onclick='send_message()'>Submit</a>					
-				</div>	
-			</div>		
-		</div>
-	</div>
-	<div class='rate modal'>
-		<div id='fader'></div>
-		<div class='modal_window' id='profile'>
-			<div class='subsection'>
-				<span class='section_head'>rate this advisor</span>
-				<p>Would you recommend this advisor to a friend?</p>
-				<br>
-				<div class='metric_text'>
-						<input type="range" class="range" min="0" max="5" data-highlight="true">
-						<span style="margin-top:30px"> not at all <span class=" right"> strongly</span></span>
-				</div>
-				<br>
-				<div class='half'>
-					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
-					<a class='primary paired button'>OK</a>					
-				</div>	
-			</div>		
-		</div>
-	</div>
-	<div id='top_banner'>Message sent</div>
-	<div id='header'>
-	</div>
-	<div class='container'>
-	
-		<div id='profile'>
+	<div id='splash'>
+		<div id='translucent_backing'>
+			<div class=''>
+		<div id=''>
 	<div class='subsection'>
 	
 		<p>
 			<div class='right standard'>
 		 	 	<a class=' secondary button' onclick='show_modal(".rate")' style='display:none'>Rate advisor</a>
-			 	<a class='  primary button' onclick='show_modal(".compose")'>Schedule consultation</a>
+
 			</div>	
-			<div class='advisor_full'>
-				<img src='assets/grant.jpg'>
-				<div id='picture_edit' class='metric_text green' onclick="$('input[type=file]').trigger('click');">Upload new picture</div><input type="file"style="visibility:hidden" />
-			</div>	
-			<span class='green header1'>Grant Sanders <span><span class='tooltip'>This advisor has a clean FINRA record</span><img src='assets/approved.png' class='approved'></span></span> <br>
-			<div id='bio' onclick='alert("modal to edit bio here")'><i>I specialize in helping young professionals and young doctors who need assistance with tax savings, budgeting, loan repayment, and investment strategies.</i></div>
-			
-			<div class='' >
-	
-				Specializes in <pop>investments</pop>,
-				recommended by <pop>parents</pop>
-			</div>
+
+			<span class='green header1'>
+				Grant Sanders 
+			</span>
+			<a class='standard right primary button' onclick='show_modal(".compose")'>
+				Talk to Grant
+			 </a>
+			<p style='width:70%' class=''>
+				<i>I specialize in helping young professionals and young doctors who need assistance with tax savings, budgeting, loan repayment, and investment strategies.</i>
+			</p>
 			<div>
-
-		
-
-			</div>
+		</div>
 		</p>
 		
 	</div>
 	<div class='subsection'>
-	
-		<span class='section_head'>Guides and written advice</span>
-		<div>
-		<p><img src="https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg"/></p>
+		<span class='section_head'>
+			Guides and written advice
+		</span>
+		
+		
+		<div class='article' onclick='$(this).find(".teaser").remove();$(this).find(".full_story").addClass("expanded");'>
+			<div class='teaser table'>
+				<img src='https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg' class=''>
+				<div style='margin:25px;
+'>
+				<p class='header2'>
+					Debt Advice For Young Docs
+				</p>
+				It's no secret that medical school is expensive, and most young doctors have to service a massive load of debt. 
+				</div>
+			</div>
+			<div class='full_story'>
+				<p class='header1'>Debt Advice For Young Docs</p>
+			<p><img src="https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg"/></p>
 
 
 
 <p>It&#8217;s no secret that medical school is expensive, and in the low-paid residency that follows, most young doctors have to service a massive load of debt. In the class of 2013, 86% of graduating medical students had an average of $169,901 student debt per person, up from $161,290 in 2011. How should residents and young physicians tackle this debt load while saving for their short and long term goals?</p>
 
-<p>Step one: Distinguish good loans and bad loans</p>
+<p class='header2'>Step one: Distinguish good loans and bad loans</p>
 
 <p>After you graduate, you will want to separate your loans into two categories: good debt and bad debt. Loans with high interest rates or not tax-deductible are bad debt. This includes credit card debt, most auto loans and unsubsidized student loans. Good loans carry low interest rates, and can be deductible against income. Some examples of good debt are mortgages, and subsidized student loans.</p>
 
@@ -112,7 +83,7 @@
 
 <p>You should also look at replacing bad debt with good debt. Among the ways to do this: refinancing your mortgage, taking out a home equity line of credit to pay off credit card debt or student loans. This is an effective way to transform bad debt into good debt. Using these strategies can save you thousands of dollars in interest or lower taxes over the course of the loans.</p>
 
-<p>Step two: Set up a debt repayment plan that you can manage</p>
+<p class='header2'>Step two: Set up a debt repayment plan that you can manage</p>
 
 <p>After graduation, residents earn somewhere between $40,000 and $50,000 during their first year. Because of the high loan to income ratio, many residents find it difficult to pay down their loan balance during residency (and rightfully so). Here are some options for student debt repayment plans.</p>
 
@@ -137,6 +108,124 @@
 
 
 		</div>
+		</div>
+		<div class='article' onclick='$(this).find(".teaser").remove();$(this).find(".full_story").addClass("expanded");'>
+			<div class='teaser table'>
+				<img src='https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg' class=''>
+				<div style='margin:25px;
+'>
+				<p class='header2'>
+					Debt Advice For Young Docs
+				</p>
+				It's no secret that medical school is expensive, and most young doctors have to service a massive load of debt. 
+				</div>
+			</div>
+			<div class='full_story'>
+				<p class='header1'>Debt Advice For Young Docs</p>
+			<p><img src="https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg"/></p>
+
+
+
+<p>It&#8217;s no secret that medical school is expensive, and in the low-paid residency that follows, most young doctors have to service a massive load of debt. In the class of 2013, 86% of graduating medical students had an average of $169,901 student debt per person, up from $161,290 in 2011. How should residents and young physicians tackle this debt load while saving for their short and long term goals?</p>
+
+<p class='header2'>Step one: Distinguish good loans and bad loans</p>
+
+<p>After you graduate, you will want to separate your loans into two categories: good debt and bad debt. Loans with high interest rates or not tax-deductible are bad debt. This includes credit card debt, most auto loans and unsubsidized student loans. Good loans carry low interest rates, and can be deductible against income. Some examples of good debt are mortgages, and subsidized student loans.</p>
+
+<p><img src="https://31.media.tumblr.com/5025d491422e0189fd8e4a63f20aba02/tumblr_inline_n1fbeavSwO1szcd59.jpg"/></p>
+
+
+
+<p>Your debt repayment plan should focus on eliminating the highest interest-bearing (bad) loans first, and working your way to the lowest interest bearing (good) loans last. This is why you shouldn&#8217;t consolidate your loans, because it limits your ability to selectively pay off the bad ones while making minimum payments on the good loans.</p>
+
+<p>You should also look at replacing bad debt with good debt. Among the ways to do this: refinancing your mortgage, taking out a home equity line of credit to pay off credit card debt or student loans. This is an effective way to transform bad debt into good debt. Using these strategies can save you thousands of dollars in interest or lower taxes over the course of the loans.</p>
+
+<p class='header2'>Step two: Set up a debt repayment plan that you can manage</p>
+
+<p>After graduation, residents earn somewhere between $40,000 and $50,000 during their first year. Because of the high loan to income ratio, many residents find it difficult to pay down their loan balance during residency (and rightfully so). Here are some options for student debt repayment plans.</p>
+
+<p>The standard repayment plan for student loans is the 10-year program. Assuming a student loan of $161,290, at a 6.8% interest rate for federal loans, the payment is $1,856 per month or $22,272 per year. Since that&#8217;s roughly half of a resident&#8217;s pre-tax salary, many simply cannot afford to make the minimum payments on a 10-year plan. This is fine for residents with a low amount of debt or income from another source, but for residents that have a high amount of debt and modest income, there are less Spartan options available.</p>
+
+<p>A 25-year extended repayment plan reduces the monthly payments considerably. The monthly payment for this plan is $1,120, or about $13,440 per year. Of course, the longer the repayment period, the more interest you pay over the course of the loan. For some residents, even this lower monthly payment may still be too burdensome to maintain their lifestyle.</p>
+
+<p>Many residents, who cannot afford a fixed repayment plan, choose an income-based repayment plan. This uses a formula that caps your minimum payment to 15% of your discretionary income, which is typically lower than the fixed term repayment plans. Although you must initially sign up for 25-year income-based or income-contingent repayment, you are not locked into this payment plan.</p>
+
+<p>If your circumstances change or if you just decide that you want to pay off your loan faster, you can. Enrolling in an income-based repayment plan also allows for debt forgiveness for direct loans. If you faithfully make income-based repayments on time every month, you might qualify for loan forgiveness after 25 years.</p>
+
+<p>If you work for a non-profit or for a federal, state or local government, debt is forgiven after 10 years of steady repayments. To have debt forgiven, you need to work full time for a qualified employer, and make all of your payments on time.</p>
+
+<p>For many medical residents, income-based repayment provides the most flexibility, but comes with some disadvantages. Because the minimum payment is based on your income, you need to submit paperwork every year to determine your minimum payment. Also, making the minimum payment means you pay more interest in the long run.</p>
+
+<p>Because income for many doctors significantly increases after residency, so will the minimum payments. You probably won&#8217;t carry a loan balance after 25 years, meaning many doctors under this repayment plan are unable to take advantage of the debt forgiveness program unless they are a public service worker.</p>
+
+<p>Also, if your debt is forgiven, you have to pay income tax on the amount of forgiven debt. The income-based repayment plan may be suitable for residents that cannot afford the minimum payments of the standard and extended repayment options, especially if they work for a government or a non-profit.</p>
+
+<p>Because every situation is unique, and not all loans qualify for every repayment plan option, you should seek the help of a financial advisor. Many advisors have experience helping young doctors, and they can give individual advice for making a debt repayment plan.</p>
+
+
+
+		</div>
+		</div>
+		<div class='article' onclick='$(this).find(".teaser").remove();$(this).find(".full_story").addClass("expanded");'>
+			<div class='teaser table'>
+				<img src='https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg' class=''>
+				<div style='margin:25px;
+'>
+				<p class='header2'>
+					Debt Advice For Young Docs
+				</p>
+				It's no secret that medical school is expensive, and most young doctors have to service a massive load of debt. 
+				</div>
+			</div>
+			<div class='full_story'>
+				<p class='header1'>Debt Advice For Young Docs</p>
+			<p><img src="https://31.media.tumblr.com/463ca1bc6589ee3077cda7bed5a69859/tumblr_inline_n1fbdq19mC1szcd59.jpg"/></p>
+
+
+
+<p>It&#8217;s no secret that medical school is expensive, and in the low-paid residency that follows, most young doctors have to service a massive load of debt. In the class of 2013, 86% of graduating medical students had an average of $169,901 student debt per person, up from $161,290 in 2011. How should residents and young physicians tackle this debt load while saving for their short and long term goals?</p>
+
+<p class='header2'>Step one: Distinguish good loans and bad loans</p>
+
+<p>After you graduate, you will want to separate your loans into two categories: good debt and bad debt. Loans with high interest rates or not tax-deductible are bad debt. This includes credit card debt, most auto loans and unsubsidized student loans. Good loans carry low interest rates, and can be deductible against income. Some examples of good debt are mortgages, and subsidized student loans.</p>
+
+<p><img src="https://31.media.tumblr.com/5025d491422e0189fd8e4a63f20aba02/tumblr_inline_n1fbeavSwO1szcd59.jpg"/></p>
+
+
+
+<p>Your debt repayment plan should focus on eliminating the highest interest-bearing (bad) loans first, and working your way to the lowest interest bearing (good) loans last. This is why you shouldn&#8217;t consolidate your loans, because it limits your ability to selectively pay off the bad ones while making minimum payments on the good loans.</p>
+
+<p>You should also look at replacing bad debt with good debt. Among the ways to do this: refinancing your mortgage, taking out a home equity line of credit to pay off credit card debt or student loans. This is an effective way to transform bad debt into good debt. Using these strategies can save you thousands of dollars in interest or lower taxes over the course of the loans.</p>
+
+<p class='header2'>Step two: Set up a debt repayment plan that you can manage</p>
+
+<p>After graduation, residents earn somewhere between $40,000 and $50,000 during their first year. Because of the high loan to income ratio, many residents find it difficult to pay down their loan balance during residency (and rightfully so). Here are some options for student debt repayment plans.</p>
+
+<p>The standard repayment plan for student loans is the 10-year program. Assuming a student loan of $161,290, at a 6.8% interest rate for federal loans, the payment is $1,856 per month or $22,272 per year. Since that&#8217;s roughly half of a resident&#8217;s pre-tax salary, many simply cannot afford to make the minimum payments on a 10-year plan. This is fine for residents with a low amount of debt or income from another source, but for residents that have a high amount of debt and modest income, there are less Spartan options available.</p>
+
+<p>A 25-year extended repayment plan reduces the monthly payments considerably. The monthly payment for this plan is $1,120, or about $13,440 per year. Of course, the longer the repayment period, the more interest you pay over the course of the loan. For some residents, even this lower monthly payment may still be too burdensome to maintain their lifestyle.</p>
+
+<p>Many residents, who cannot afford a fixed repayment plan, choose an income-based repayment plan. This uses a formula that caps your minimum payment to 15% of your discretionary income, which is typically lower than the fixed term repayment plans. Although you must initially sign up for 25-year income-based or income-contingent repayment, you are not locked into this payment plan.</p>
+
+<p>If your circumstances change or if you just decide that you want to pay off your loan faster, you can. Enrolling in an income-based repayment plan also allows for debt forgiveness for direct loans. If you faithfully make income-based repayments on time every month, you might qualify for loan forgiveness after 25 years.</p>
+
+<p>If you work for a non-profit or for a federal, state or local government, debt is forgiven after 10 years of steady repayments. To have debt forgiven, you need to work full time for a qualified employer, and make all of your payments on time.</p>
+
+<p>For many medical residents, income-based repayment provides the most flexibility, but comes with some disadvantages. Because the minimum payment is based on your income, you need to submit paperwork every year to determine your minimum payment. Also, making the minimum payment means you pay more interest in the long run.</p>
+
+<p>Because income for many doctors significantly increases after residency, so will the minimum payments. You probably won&#8217;t carry a loan balance after 25 years, meaning many doctors under this repayment plan are unable to take advantage of the debt forgiveness program unless they are a public service worker.</p>
+
+<p>Also, if your debt is forgiven, you have to pay income tax on the amount of forgiven debt. The income-based repayment plan may be suitable for residents that cannot afford the minimum payments of the standard and extended repayment options, especially if they work for a government or a non-profit.</p>
+
+<p>Because every situation is unique, and not all loans qualify for every repayment plan option, you should seek the help of a financial advisor. Many advisors have experience helping young doctors, and they can give individual advice for making a debt repayment plan.</p>
+
+
+
+		</div>
+		</div>
+
+		
+	</div>
 		<iframe src='http://mavenmoney.tumblr.com/post/77531798735/debt-advice-for-young-docs' class='full' style='border:none;height:400px; display:none;'></iframe>
 	</div>	
 	<div class='subsection'>
@@ -251,7 +340,13 @@ Los Angeles, CA 90017</span>
 		<script src='jquery-1.9.1.min.js'></script>
 		<script src='maven.js'></script>
 
-	</div>		
+			</div>
+		</div>
+			
+	</div>
+
+	</div>
+
 
 </body>
 
